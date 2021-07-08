@@ -1,0 +1,87 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+  letter-spacing: 2.5px;
+  line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* title */
+
+.title {
+  position: relative;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.title img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* carousel */
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel img {
+  width: 100%;
+  /* height: 60vh; */
+  /* object-fit: cover; */
+  scroll-snap-align: start;
+}
+
+.carousel .slide{
+  width: 100%;
+  min-width: 100%;
+  height: 60vh;
+  border: 1px solid black;
+  
+  scroll-snap-align: start;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.btns button {
+  margin: 0px 4px;
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}  

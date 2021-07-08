@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+
+            <h1>Simple Carousel</h1>
+
+
+            <div class='carousel'>
+                <img src='https://www.evernote.com/l/AOJvwDeLIhtAE4B8mglnnHc4TQ0y2p18xGYB/image.jpg' />
+                <img src='https://www.evernote.com/l/AOL5TcAn3etDoIVK2I-vhWnPS5SPm6x7ta0B/image.jpg' />
+                <img src='https://www.evernote.com/l/AOIBO8Eam1hJhqvMqRljvm5eqyOMEe858wkB/image.jpg' />
+                <img src='https://www.evernote.com/l/AOLN-IoyOZhCVY-lsOUMwsk4NDRwVlkJoIYB/image.jpg' />
+                <img src='https://www.evernote.com/l/AOJvwDeLIhtAE4B8mglnnHc4TQ0y2p18xGYB/image.jpg' />
+                <img src='https://www.evernote.com/l/AOL5TcAn3etDoIVK2I-vhWnPS5SPm6x7ta0B/image.jpg' />
+                <img src='https://www.evernote.com/l/AOIBO8Eam1hJhqvMqRljvm5eqyOMEe858wkB/image.jpg' />
+                <img src='https://www.evernote.com/l/AOLN-IoyOZhCVY-lsOUMwsk4NDRwVlkJoIYB/image.jpg' />
+            </div>
+            
+            <div class='btns'>
+                <button class='btn-prev'><</button>
+                <button class='btn-next'>></button>
+            </div>
+
+        </div>
+
+        <script src="js/Carousel.js" async defer></script>
+        <script>
+            window.onload = function() {
+                // カルーセルを生成
+                var carousel = new Carousel('.carousel');
+                
+                // ボタンのセットアップ
+                var btnPrev = document.querySelector('.btn-prev');
+                var btnNext = document.querySelector('.btn-next');
+                
+                btnPrev.onclick = () => { carousel.prev(); };
+                btnNext.onclick = () => { carousel.next(); };
+            };
+        </script>
+
+
+        
+    </body>
+</html>
